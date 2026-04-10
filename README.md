@@ -87,12 +87,6 @@ You must create all missing files from scratch as part of the challenge. (docker
   - Response Time Graph
 - Experiment with different numbers of users and request patterns.
 
-### 5. Deploy and Evaluate on Minukube ⚖️
-
-- Initialize a minikube cluster using `minikube start`
-- Deploy services creating the YAML files (you can use HELM charts)
-- Monitor service distribution and load balancing across replicas
-- Evaluate the system behavior under load using JMeter again
 
 ---
 
@@ -108,7 +102,6 @@ You must create all missing files from scratch as part of the challenge. (docker
 
 - Your completed repository with:
   - All configuration and Docker files
-  - A working application using minikube
   - Screenshots or reports from JMeter test results
 
 ---
