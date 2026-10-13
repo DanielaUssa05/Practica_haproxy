@@ -54,7 +54,7 @@ Descargar y descomprimir Apache JMeter 5.6.3.
 En Windows, abrir PowerShell y entrar a la carpeta `bin` de JMeter:
 
 ```powershell
-cd "C:\ruta\apache-jmeter-5.6.3\bin"
+cd "C:\Users\danie\Downloads\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin"
 .\jmeter.bat
 ```
 
