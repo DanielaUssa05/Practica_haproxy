@@ -15,7 +15,7 @@ Para ejecutar este proyecto se necesita:
 Clonar el repositorio desde una terminal:
 
 ```bash
-git clone https://github.com/kalmeida51521-pixel/Practica_haproxy.git
+git clone https://github.com/DanielaUssa05/Practica_haproxy.git
 cd Practica_haproxy
 ```
 
@@ -166,3 +166,11 @@ docker compose down
 ```
 
 Este comando detiene y elimina los contenedores del proyecto sin borrar los archivos del repositorio.# -Desaf-o-Balanceo-de-carga-con-HAProxy-Docker-React-FastAPI-JMeter
+
+## Informe y evidencias de las pruebas
+
+El informe completo de las pruebas de rendimiento realizadas con Apache JMeter, incluyendo capturas de pantalla, resultados y análisis, se encuentra disponible en:
+
+[Ver informe de pruebas JMeter](docs/Informe_Pruebas_JMeter.pdf)
+
+El plan de pruebas ejecutable está disponible en `jmeter/Proyecto_HAProxy_Completo.jmx`.
