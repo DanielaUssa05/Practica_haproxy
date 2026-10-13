@@ -1,22 +1,43 @@
+
 services:
   frontend:
-    # TODO: Add frontend service
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    networks:
+      - app-net
 
   backend:
-    # TODO: Add backend service
+    build: ./backend
+    environment:
+      - SERVER_ID=backend1
+    expose:
+      - "8000"
+    networks:
+      - app-net
+
+  backend2:
+    build: ./backend
+    environment:
+      - SERVER_ID=backend2
+    expose:
+      - "8000"
+    networks:
+      - app-net
 
   haproxy:
     image: haproxy:2.8
     volumes:
-      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
     ports:
-      - "80:80"
+      - "8080:8080"
     depends_on:
       - frontend
       - backend
+      - backend2
     networks:
       - app-net
 
 networks:
   app-net:
-    driver: bridge
+    driver: bridge 

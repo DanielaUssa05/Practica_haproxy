@@ -1,3 +1,6 @@
+ 
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -10,7 +13,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 @app.get("/api/hello")
 def read_hello():
-    return {"message": "Hello from FastAPI!"}
+    return {
+        "message": "Hello from FastAPI!",
+        "server": os.getenv("SERVER_ID", "backend")
+    }
